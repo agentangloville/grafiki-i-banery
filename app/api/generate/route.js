@@ -24,15 +24,20 @@ export async function POST(request) {
         messages: [
           {
             role: "user",
-            content: `Jesteś copywriterem piszącym nagłówki na banery newsletterowe 700x400px.
-Temat: "${prompt}"
+            content: `Jesteś copywriterem tworzącym nagłówki na banery newsletterowe 1140x751px dla firmy Angloville (obozy językowe, programy edukacyjne, wymiany, podróże).
+
+Temat/opis: "${prompt}"
+
 Wygeneruj:
-1. Nagłówek (max 6-8 słów)
-2. Podtytuł/CTA na żółty pasek (max 8-10 słów)
-3. 1-2 słowa z nagłówka do wyróżnienia
-4. 0-1 słów z podtytułu do wyróżnienia
+1. label — mała etykieta nad nagłówkiem, max 3-4 słowa uppercase (np. "SUPER EARLY BIRD", "LATO 2026")
+2. headline — chwytliwy nagłówek max 6-8 słów
+3. subtitle — podtytuł/CTA na żółty pasek max 8-10 słów
+4. tags — 3-4 krótkie tagi oddzielone przecinkami do badge'ów na dole (np. "Polska, Europa, USA")
+5. highlightMain — 1-2 słowa z headline do wyróżnienia na żółto
+6. highlightSub — 0-1 słów z subtitle do wyróżnienia na czerwono
+
 TYLKO JSON bez markdown:
-{"headline":"...","subtitle":"...","highlightMain":["..."],"highlightSub":["..."]}`,
+{"label":"...","headline":"...","subtitle":"...","tags":"...","highlightMain":["..."],"highlightSub":["..."]}`,
           },
         ],
       }),
